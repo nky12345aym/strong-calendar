@@ -1,0 +1,33 @@
+﻿body
+{
+}
+
+/*基本形*/
+#main_wrapper
+{
+	width:900px;
+	height:650px;
+	margin:auto;
+	background-color:Red;
+	}
+	
+/*ログインバー*/
+#login
+{
+	width:auto;
+	height:50px;
+	background-color:Aqua;
+	}
+	
+#center
+{
+	width:auto;
+	height:500px;
+	}
+	
+#foot
+{
+	width:auto;
+	height:100px;
+	background-color:Aquamarine;
+	}
