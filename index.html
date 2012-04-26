@@ -3,17 +3,29 @@
 <head>
     <title>Untitled Page</title>
 	<link href="css/style_main.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/script.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-2022-jp">
 </head>
 
 <!-- 基本的なレイアウト -->
 <body>
 	<!-- 最下部 -->
 	<div id="main_wrapper">
-		<div id="login">
+		<div id="login_stat">
+			
+			<table border="0" >
+				<tr>
+					<td><div id="status_text">Welcome!</div></td>
+					<td><input type="button" onclick="openWin('login.html');" value="Login"/></td>
+					<td><input type="button" onclick="login('logout');" value="Logout"/></td>
+				</tr>
+			</table>
+			
+			
 		</div>
 		<div id="center">
 			<div id="calender">
-				ここに日めくり
+				<input type="button" value="calender" onclick="himekuri()" />
 			</div>
 			<div id="todo">
 				todo
