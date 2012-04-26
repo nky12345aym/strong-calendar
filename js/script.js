@@ -1,4 +1,4 @@
-
+/**/
 /* ウィンドウのポップアップ */
 function openWin( theURI ) {
     PopUpWin = window.open( theURI, 'theWin', 'scrollbars=1,width=270,height=120,resizable=1,directories=0,toolbar=0,status=1,location=0' );
