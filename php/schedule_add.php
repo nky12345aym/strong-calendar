@@ -4,7 +4,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>無題ドキュメント</title>
 </head>
-
 <body>
+<?php
+	$SCHEDULE = $_POST['schedule'];
+	$DATE = $_POST['date'];
+	$TIME = $_POST['time'];
+	$PLACE = $_POST['place'];
+	$NOTES = $_POST['notes'];
+	
+	print("$date");
+?>
 </body>
 </html>
