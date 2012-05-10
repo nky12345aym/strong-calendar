@@ -1,0 +1,56 @@
+
+#calTable {
+	border-collapse: collapse;
+}
+
+#calTable td,
+#calTable th {
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	font-family: Verdana, Helvetica;
+	font-size: 10px;
+	color: #666666;
+	border: 1px solid #eeeeee;
+	margin: 0px;
+	padding: 0px;
+}
+
+#calTable th {
+	height: 20px;
+	background-color: #eeeeee;
+	text-align: center;
+	font-weight: normal;
+	border: 1px solid #e0e0e0;
+}
+
+#calTable td#mon {
+	width: 280px;
+	height: 30px;
+	font-size: 12px;
+	font-weight: bold;
+	border: 1px solid #e0e0e0;
+}
+
+#calTable td.sat {
+	background-color: #f0f6ff;
+	color: #4b86de;
+}
+
+#calTable td.sun {
+	background-color: #fff0f0;
+	color: #d63838;
+}
+
+#calTable td.today {
+	background-color: #ffffbb;
+	font-weight: bold;
+	color: #ff6600;
+}
+
+#calTable td#webJozu {
+	width: 280px;
+	height: 20px;
+	text-align: right;
+	padding-right:5px;
+}

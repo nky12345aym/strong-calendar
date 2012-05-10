@@ -5,6 +5,11 @@ function openWin( theURI ) {
     PopUpWin.focus();
 }
 
+/* ウィンドウの削除 */
+function closeWin() {
+    window.open( 'about:blank', '_self' ).close();
+}
+
 
 /* カレンダー表示 */
 function himekuri() {
