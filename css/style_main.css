@@ -10,6 +10,7 @@
 	height:650px;
 	margin:auto;
 	/*background-color:Red;*/
+	border-style: solid;
 	}
 	
 /*ログインバー*/
@@ -18,12 +19,14 @@
 	width:auto;
 	height:50px;
 	/*background-color:Aqua;*/
+	border-style: solid;
 	}
 	
 #center
 {
 	width:auto;
 	height:500px;
+	border-style: solid;
 	}
 	
 #foot
@@ -31,6 +34,7 @@
 	width:auto;
 	height:100px;
 	/*background-color:Aquamarine;*/
+	border-style: solid;
 	}
 	
 /*日めくり欄*/
@@ -41,28 +45,45 @@
 	margin-left:30px;
 	margin-top:50px;
 	float:left;
+	border-style: solid;
 	}
+/*ふつうのかれんだー*/
+#nomal_cal{
+	width:300px;
+	height:400px;
+	margin-left:10px;
+	float:left;
+}
+/*ひめくり*/
+#himekuri_cal{
+	width:80px;
+	height:400px;
+	margin-left:10px;
+	float:left;
+}
 	
 /*TODO*/
 #todo
 {
-	width:400px; 
-	height:300px;
+	width:380px; 
+	height:280px;
 	margin-left:40px;
 	margin-right:30px;
 	float:right;
 	/*background-color:Lime;*/
 	margin-top:50px;
+	border-style: solid;
 	}
 	
 /*submit*/
 #todo_btn
 {
-	width:400px; 
-	height:80px;
+	width:380px; 
+	height:60px;
 	margin-left:40px;
 	margin-right:30px;
 	float:right;
 	/*background-color:Lime;*/
 	margin-top:20px;
+	border-style: solid;
 	}

@@ -6,6 +6,7 @@
 	<script type="text/javascript" src="js/script.js"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-2022-jp">
 	<link href="css/calendar.css" rel="stylesheet" type="text/css" />
+	<link href="css/himekuri.css" rel="stylesheet" type="text/css" />
 </head>
 
 <!-- 基本的なレイアウト -->
@@ -27,7 +28,16 @@
 		<div id="center">
 			<div id="calender">
 				<!--<input type="button" value="calender" onclick="himekuri()" />-->
-				<script type="text/javascript" src="js/calendar.js"></script>
+				<div id="himekuri_cal">
+					<p class="calendar">
+						<span id="date">８</span>
+						<em id="month">2011 / 7</em>
+					</p>
+					<script type="text/javascript" src="js/himekuri.js"></script>
+				</div>
+				<div id="nomal_cal">
+					<script type="text/javascript" src="js/calendar.js"></script>
+				</div>
 			</div>
 			<div id="todo">
 				todo
