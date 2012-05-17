@@ -18,7 +18,7 @@
 			<table border="0" >
 				<tr>
 					<td><div id="status_text">Welcome!</div></td>
-					<td><input type="button" onclick="openWin('login.html');" value="Login"/></td>
+					<td><input type="button" onclick="openWin('login.html', 'login');" value="Login"/></td>
 					<td><input type="button" onclick="login('logout');" value="Logout"/></td>
 				</tr>
 			</table>
@@ -27,7 +27,6 @@
 		</div>
 		<div id="center">
 			<div id="calender">
-				<!--<input type="button" value="calender" onclick="himekuri()" />-->
 				<div id="himekuri_cal">
 					<p class="calendar">
 						<span id="date">８</span>
@@ -43,7 +42,7 @@
 				todo
 			</div>
 			<div id="todo_btn">
-				submit
+				<input type="button" name="schedule_add" value="リストの挿入" onclick="openWin('schedule_add.html', 'schedule_add')"/>
 			</div>
 		</div>
 		<div id="foot">
