@@ -198,7 +198,7 @@ for(i=0; i<theWeek; i++){
 			document.write(' class="today"');
 		}
 
-		document.write('>');
+		document.write('><a href="disp.html">');
 
 		if((i == 0 && j < firstDay) || dateNum > monNum){
 			document.write('&nbsp;');
@@ -218,7 +218,7 @@ for(i=0; i<theWeek; i++){
 			}
 		}
 
-		document.write('</td>');
+		document.write('</a></td>');
 	}
 
 	document.write('</tr>');
