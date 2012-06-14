@@ -10,7 +10,7 @@
 </head>
 
 <!-- 基本的なレイアウト -->
-<body>
+<body onload="loadCSV('data/sample.CSV')">
 	<!-- 最下 -->
 	<div id="main_wrapper">
 		<div id="login_stat">
@@ -39,9 +39,10 @@
 				</div>
 			</div>
 			<div id="todo">
-				todo
+				<div id="result"></div>
 			</div>
 			<div id="todo_btn">
+				
 				<input type="button" name="schedule_add" value="リストの挿入" onclick="openWin('schedule_add.html', 'schedule_add')"/>
 			</div>
 		</div>

@@ -11,18 +11,25 @@
 	$DBSERVER = "localhost";
 	$DBUSER = "root";
 	$DBPASSWORD = "";
-	$DBNAME = "calDB";
+	$DBNAME = "calenDB";
 	$TABLENAME = "todoTable";
 	
-	$key[0] = "id";//判別キー
-	$key[1] = "todo";//予定
-	$key[2] = "date";//日付
-	$key[3] = "time";//時間
-	$key[4] = "place";//場所
-	$key[5] = "etc";//備考
+	$db= mysql_connect($DBSERVER, $DBUSER, $DBPASSWORD)
 	
-	$db= mysql_connect($DBSERVER, $DBUSER, $DBPASSWORD){
-		
-	}
+	//読み込み文字コード
+	mysql_query("set names utf8");
 	
+	$selectdb = mysql_select_db($DBNAME);
+	
+	$sql = "SELECT * from ". DBNAME;
+	
+	//発行
+	$rst = mysql_query($sql);
+	
+	//結果セット破棄
+	mysql_free_result($rst);
+	//接続解除
+	$db = mysql_close($db);
+	
+	/* */
 ?>
