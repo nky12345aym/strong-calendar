@@ -1,35 +1,55 @@
 ﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//JPN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link href="css/style_schedule_add.css" rel="stylesheet" type="text/css" />
-<title>予定登録</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href="css/style_schedule_add.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+	<!--
+		function SaveCSV( schedule, date, time, place, notes ) {
+			try {
+				
+				var data1 = schedule.value;
+				var data2 = date.value;
+				var data3 = time.value;
+				var data4 = place.value;
+				var data5 = notes.value;
 
+			} catch ( e ) {
+				alert( "error:" + e );
+			} finally {
+				
+			}
+			//ウィンドウが閉じる
+			open( 'about:blank', '_self' ).close();
+
+		}
+	//-->
+	</script>
+	<title>予定登録</title>
 </head>
-
 <body>
 	<div id="wrop">
-    	<div id = "schedule_wrop">
-        
-        	<header>
-            
-            </header>
-            <form method="post" action="php/schedule_add.php" >
-                <li class="form">予定</li>
-                <input class="form" type="text" name="schedule" size="60"> <br>
-                <li class="form">日付</li>
-                <input class="form" type="date" name="date" min="2012-01-01">
-                <li class="form">時刻</li>
-                <input class="form" type="time" name="time" value="12:00:00" step="600">
-                <li class="form">場所</li>
-                <input class="form" type="text" name="place" size="60">
-                <li class="form">備考</li>
-                <textarea class="form" name="notes" rows="5" cols="53">
-                </textarea> <br>
-                <input type="submit" value="入力">
-                <button>戻る</button>
-            </form>
-        </div>
-    </div>
+		<div id="schedule_wrop">
+			<form>
+			<li class="form">予定</li>
+			<input class="form" type="text" name="schedule" size="60">
+			<br>
+			<li class="form">日付</li>
+			<input class="form" type="date" name="date" min="2012-01-01">
+			<li class="form">時刻</li>
+			<input class="form" type="time" name="time" value="12:00:00" step="600">
+			<li class="form">場所</li>
+			<input class="form" type="text" name="place" size="60">
+			<li class="form">備考</li>
+			<textarea class="form" name="notes" rows="5" cols="53">null</textarea>
+			<br>
+			<button onclick="SaveCSV(schedule, date, time, place, notes)">
+				予定入力
+			</button>
+			<button>
+				戻る</button>
+		</div>
+		</form>
+	</div>
 </body>
 </html>
