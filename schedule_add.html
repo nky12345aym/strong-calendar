@@ -7,18 +7,25 @@
 	<!--
 		function SaveCSV( schedule, date, time, place, notes ) {
 			try {
-				
 				var data1 = schedule.value;
 				var data2 = date.value;
 				var data3 = time.value;
 				var data4 = place.value;
-				var data5 = notes.value;
+				if ( notes.value != null ) {
+					var data5 = notes.value;
+				} else {
+					var data5 = null;
+				}
 
 			} catch ( e ) {
 				alert( "error:" + e );
 			} finally {
-				
 			}
+
+			alert( data1 + "," + data2 + "," + data3 + "," + data4 + "," + data5 );
+			
+
+			
 			//ウィンドウが閉じる
 			open( 'about:blank', '_self' ).close();
 
@@ -41,15 +48,15 @@
 			<li class="form">場所</li>
 			<input class="form" type="text" name="place" size="60">
 			<li class="form">備考</li>
-			<textarea class="form" name="notes" rows="5" cols="53">null</textarea>
+			<textarea class="form" name="notes" rows="5" cols="53"></textarea>
 			<br>
 			<button onclick="SaveCSV(schedule, date, time, place, notes)">
 				予定入力
 			</button>
 			<button>
 				戻る</button>
+			</form>
 		</div>
-		</form>
 	</div>
 </body>
 </html>

@@ -1,4 +1,10 @@
-/**/
+/* 変数群 */
+var static_login_flg = false;
+
+
+
+
+
 /* ウィンドウのポップアップ */
 function openWin( theURI, status ) {
 
@@ -34,10 +40,28 @@ function himekuri() {
 /* ログインステータス */
 function login( status ) {
     var objid = document.getElementById( 'status_text' );
-    if ( status == "login" ) { msg1 = "Welcome!"; }
-    if ( status == "logout" ) { msg1 = "Please Login"; }
+    if ( status == "login" || static_login_flg == true ) {
+        window.alert( "static_login_flg = true" );
+        msg1 = "Welcome!";
+    }
+    if ( status == "logout" || static_login_flg == false ) {
+        window.alert( "static_login_flg = false" );
+        msg1 = "Please Login";
+    }
 
     objid.innerHTML = msg1;
+}
+
+/* ログインチェック */
+function loginCheck( id, pass ) {
+    var id_data = id.value;
+    var pass_data = pass.value;
+    if ( id_data == "id" && pass_data == "pass" ) {
+        window.alert( "OK" );
+        static_login_flg = true;
+    } else {
+        window.alert( "NG" );
+    }
 }
 
 /*
@@ -90,7 +114,7 @@ function parseCSV( str ) {
 }
 
 
-//---------ここから下出力-----------
+
 function createXMLHttpRequest( cbFunc ) {
     var XMLhttpObject = null;
     try {
@@ -122,4 +146,4 @@ function getAjaxFilter() {
         }
     }
 }
-//---------ここから上出力-----------
+
