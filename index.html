@@ -1,36 +1,76 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//JPN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" >
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Untitled Page</title>
+	<title>Untitled Page</title>
 	<link href="css/style_main.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/ajax.js"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-2022-jp">
 	<link href="css/calendar.css" rel="stylesheet" type="text/css" />
 	<link href="css/himekuri.css" rel="stylesheet" type="text/css" />
-</head>
 
+	<script type="text/javascript">
+		<!--
+		//ここのjsでデータセットする
+		function getFile() {
+
+			var url = 'js/test.csv';
+			sendRequest( url, writeData, 'GET', '' );
+		}
+
+		function writeData( req ) {
+			// テーブル初期化
+			var target_area = document.getElementById( "result" );
+			var child = target_area.childNodes;
+			var length = child.length;
+			for ( var i = 0; i < length; i++ ) {
+				target_area.removeChild( child[0] );
+			}
+			// データ取得
+			var rows = req.responseText.split( '\r' ).join( '' ).split( '\n' );
+			for ( var i = 0; i < rows.length; i++ ) {
+				cells = rows[i].split( ',' );
+				// CSVの1行が3より小さい場合は追加処理なし
+				if ( cells.length < 5 ) { break; }
+				var trElem = document.createElement( 'tr' );
+				target_area.appendChild( trElem );
+				for ( var j = 0; j < cells.length; j++ ) {
+					var text = document.createTextNode( cells[j] );
+					var tdElem = document.createElement( 'td' );
+					tdElem.appendChild( text );
+					trElem.appendChild( tdElem );
+				}
+			}
+		}
+		-->
+	</script>
+	
+</head>
 <!-- 基本的なレイアウト -->
-<body onload="loadCSV('data/sample.csv')">
+<body >
 	<!-- 最下 -->
 	<div id="main_wrapper">
 		<div id="login_stat">
-			
-			<table border="0" >
+			<table border="0">
 				<tr>
-					<td><div id="status_text">Welcome!</div></td>
-					<td><input type="button" onclick="openWin('login.html', 'login');" value="Login"/></td>
-					<td><input type="button" onclick="login('logout');" value="Logout"/></td>
+					<td>
+						<div id="status_text">
+							Welcome!</div>
+					</td>
+					<td>
+						<input type="button" onclick="openWin('login.html', 'login');" value="Login" />
+					</td>
+					<td>
+						<input type="button" onclick="login('logout');" value="Logout" />
+					</td>
 				</tr>
 			</table>
-			
-			
 		</div>
 		<div id="center">
 			<div id="calender">
 				<div id="himekuri_cal">
 					<p class="calendar">
-						<span id="date">８</span>
-						<em id="month">2011 / 7</em>
+						<span id="date">８</span> <em id="month">2011 / 7</em>
 					</p>
 					<script type="text/javascript" src="js/himekuri.js"></script>
 				</div>
@@ -39,11 +79,25 @@
 				</div>
 			</div>
 			<div id="todo">
-				<div id="result"></div>
+				<form>
+				<input type="button" value="click" onclick="getFile();">
+				</form>
+				<table border="1">
+					<thead>
+						<tr>
+							<th>予定</th>
+							<th>日付</th>
+							<th>時刻</th>
+							<th>場所</th>
+							<th>備考</th>
+						</tr>
+					</thead>
+					<tbody id="result">
+					</tbody>
+				</table>
 			</div>
 			<div id="todo_btn">
-				
-				<input type="button" name="schedule_add" value="リストの挿入" onclick="openWin('schedule_add.html', 'schedule_add')"/>
+				<input type="button" name="schedule_add" value="リストの挿入" onclick="openWin('schedule_add.html', 'schedule_add')" />
 			</div>
 		</div>
 		<div id="foot">

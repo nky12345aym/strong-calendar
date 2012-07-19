@@ -1,7 +1,7 @@
-
+ï»¿
 /*
    -----------------------------------------------------
-   ƒJƒŒƒ“ƒ_[
+   ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼
    Ver. 1.0.1
    update 2011.3.5
    Copyright (C) WEB-JOZU  URL:http://www.web-jozu.com/
@@ -21,61 +21,61 @@ function holidaySet(MM,DD,WEEK,DAY,TTL){
 }
 
 
-//Œ»Ý‚Ì“ú•t‚ðŽæ“¾
+//ç¾åœ¨ã®æ—¥ä»˜ã‚’å–å¾—
 nowDate = new Date();
 theYear = nowDate.getFullYear();
 theMonth = nowDate.getMonth();
 theDate = nowDate.getDate();
 theDay = nowDate.getDay();
 
-//ŒŽ‚Ì“ú”Žæ“¾
+//æœˆã®æ—¥æ•°å–å¾—
 monNum = new Date(theYear, theMonth + 1, 0).getDate();
 
-//1“ú‚Ì—j“ú‚ðŽæ“¾
+//1æ—¥ã®æ›œæ—¥ã‚’å–å¾—
 firstDay = new Date(theYear, theMonth, 1).getDay();
 
-//ŒŽ‚ÌT‚ðŽæ“¾
+//æœˆã®é€±ã‚’å–å¾—
 theWeek = Math.ceil((monNum + firstDay) / 7);
 
 
-//j“ú‚ðÝ’è
-holidaySet(1,1,0,0,'Œ³’U');
-holidaySet(1,0,2,1,'¬l‚Ì“ú');
-holidaySet(2,11,0,0,'Œš‘‹L”O‚Ì“ú');
+//ç¥æ—¥ã‚’è¨­å®š
+holidaySet(1,1,0,0,'å…ƒæ—¦');
+holidaySet(1,0,2,1,'æˆäººã®æ—¥');
+holidaySet(2,11,0,0,'å»ºå›½è¨˜å¿µã®æ—¥');
 
 if(theYear%4 == 0 || theYear%4 == 1){
-	holidaySet(3,20,0,0,'t•ª‚Ì“ú');
+	holidaySet(3,20,0,0,'æ˜¥åˆ†ã®æ—¥');
 }else{
-	holidaySet(3,21,0,0,'t•ª‚Ì“ú');
+	holidaySet(3,21,0,0,'æ˜¥åˆ†ã®æ—¥');
 }
 
-holidaySet(4,29,0,0,'º˜a‚Ì“ú');
-holidaySet(5,3,0,0,'Œ›–@‹L”O“ú');
-holidaySet(5,4,0,0,'‚Ý‚Ç‚è‚Ì“ú');
-holidaySet(5,5,0,0,'‚±‚Ç‚à‚Ì“ú');
-holidaySet(7,0,3,1,'ŠC‚Ì“ú');
-holidaySet(9,0,3,1,'Œh˜V‚Ì“ú');
+holidaySet(4,29,0,0,'æ˜­å’Œã®æ—¥');
+holidaySet(5,3,0,0,'æ†²æ³•è¨˜å¿µæ—¥');
+holidaySet(5,4,0,0,'ã¿ã©ã‚Šã®æ—¥');
+holidaySet(5,5,0,0,'ã“ã©ã‚‚ã®æ—¥');
+holidaySet(7,0,3,1,'æµ·ã®æ—¥');
+holidaySet(9,0,3,1,'æ•¬è€ã®æ—¥');
 
 if(theYear >= 2012 && theYear <= 2044 && theYear%4 == 0){
-	holidaySet(9,22,0,0,'H•ª‚Ì“ú');
+	holidaySet(9,22,0,0,'ç§‹åˆ†ã®æ—¥');
 }else{
-	holidaySet(9,23,0,0,'H•ª‚Ì“ú');
+	holidaySet(9,23,0,0,'ç§‹åˆ†ã®æ—¥');
 }
 
-holidaySet(10,0,2,1,'‘Ìˆç‚Ì“ú');
-holidaySet(11,3,0,0,'•¶‰»‚Ì“ú');
-holidaySet(11,23,0,0,'‹Î˜JŠ´ŽÓ‚Ì“ú');
-holidaySet(12,23,0,0,'“Vc’a¶“ú');
+holidaySet(10,0,2,1,'ä½“è‚²ã®æ—¥');
+holidaySet(11,3,0,0,'æ–‡åŒ–ã®æ—¥');
+holidaySet(11,23,0,0,'å‹¤åŠ´æ„Ÿè¬ã®æ—¥');
+holidaySet(12,23,0,0,'å¤©çš‡èª•ç”Ÿæ—¥');
 
-//j“ú‚Ì”‚ðŽæ“¾
+//ç¥æ—¥ã®æ•°ã‚’å–å¾—
 holiNum = i;
 
 
 
-//ƒJƒŒƒ“ƒ_[•\Ž¦
+//ã‚«ãƒ¬ãƒ³ãƒ€ãƒ¼è¡¨ç¤º
 document.write('<table id="calTable">');
 document.write('<tr>');
-document.write('<td colspan="7" id="mon">' + (theMonth + 1) + 'ŒŽ</td>');
+document.write('<td colspan="7" id="mon">' + (theMonth + 1) + 'æœˆ</td>');
 document.write('</tr>');
 document.write('<tr>');
 document.write('<th>SUN</th>');
@@ -164,18 +164,18 @@ for(i=0; i<theWeek; i++){
 
 		}else if(nationHoli == "on"){
 			if(dateNum == theDate){
-				document.write(' class="sun today" title="‘–¯‚Ì‹x“ú"');
+				document.write(' class="sun today" title="å›½æ°‘ã®ä¼‘æ—¥"');
 			}else{
-				document.write(' class="sun" title="‘–¯‚Ì‹x“ú"');
+				document.write(' class="sun" title="å›½æ°‘ã®ä¼‘æ—¥"');
 			}
 
 			nationHoli = "off";
 	
 		}else if(subHoli == "on"){
 			if(dateNum == theDate){
-				document.write(' class="sun today" title="U‘Ö‹x“ú"');
+				document.write(' class="sun today" title="æŒ¯æ›¿ä¼‘æ—¥"');
 			}else{
-				document.write(' class="sun" title="U‘Ö‹x“ú"');
+				document.write(' class="sun" title="æŒ¯æ›¿ä¼‘æ—¥"');
 			}
 
 			subHoli = "off";
