@@ -41,11 +41,11 @@ function himekuri() {
 function login( status ) {
     var objid = document.getElementById( 'status_text' );
     if ( status == "login" || static_login_flg == true ) {
-        window.alert( "static_login_flg = true" );
+        //window.alert( "static_login_flg = true" );
         msg1 = "Welcome!";
     }
     if ( status == "logout" || static_login_flg == false ) {
-        window.alert( "static_login_flg = false" );
+        //window.alert( "static_login_flg = false" );
         msg1 = "Please Login";
     }
 
