@@ -1,4 +1,6 @@
-﻿function getFile() {
+﻿//http://komitsudo.blog70.fc2.com/blog-entry-70.html 参考
+
+function getFile() {
 
     var url = 'test.csv';
     sendRequest( url, writeData, 'GET', '' );
@@ -16,7 +18,7 @@ function writeData( req ) {
     var rows = req.responseText.split( '\r' ).join( '' ).split( '\n' );
     for ( var i = 0; i < rows.length; i++ ) {
         cells = rows[i].split( ',' );
-        // CSVの1行が3より小さい場合は追加処理なし
+        // CSVの1行が5より小さい場合は追加処理なし
         if ( cells.length < 5 ) { break; }
         var trElem = document.createElement( 'tr' );
         target_area.appendChild( trElem );

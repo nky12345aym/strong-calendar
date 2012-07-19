@@ -1,3 +1,6 @@
+//http://komitsudo.blog70.fc2.com/blog-entry-70.html 参考
+
+
 function sendRequest( url, callback, method, data )
 {
     // XMLHttpRequestオブジェクト生成
